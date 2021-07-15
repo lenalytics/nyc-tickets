@@ -1,0 +1,22 @@
+version: "3.0"
+
+services:
+  postgres:
+    build: ./postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=analyst
+      - POSTGRES_PASSWORD=tickets
+      - POSTGRES_DB=tickets
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+  metabase:
+    # Database env variables are set in environment specific env files in ../containers/metabase
+    build: ./metabase
+    ports:
+      - "7376:3000"
+
+volumes:
+  pg-data:
