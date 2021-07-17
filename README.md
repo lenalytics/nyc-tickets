@@ -2,7 +2,7 @@
 
 Here, we shall analyse the ["NYC Parking Tickets"](https://www.kaggle.com/new-york-city/nyc-parking-tickets/code) dataset from Kaggle. To dig deeper into the data and uncover various insights, I will introduce such tools as Docker and Metabase, and explain the setup step by step.
 
-Live demo of the resulting [dashboard can be found here](http://143.198.180.47:8084/public/dashboard/a08b167b-bdfd-4c98-8df6-0f63a53c101a).
+Live demo of the resulting [dashboard can be found here](http://143.198.180.47:8084/public/dashboard/996d6276-59d9-4f66-b7b0-d1e60bced52b).
 
 ## About the dataset
 
@@ -275,7 +275,7 @@ ORDER BY "vehicle_count" DESC
 
 ![Vehicles By Make](https://d1ydrm1s5noqxj.cloudfront.net/nyc_vehicles_by_make.png)
 
-[Link to live query](http://143.198.180.47:8084/public/question/a41c2b65-2b58-4967-bac6-39d07f7605a9)
+[Link to live query](http://143.198.180.47:8084/public/question/90250e13-2cf9-4262-b287-abdc8f5f86c8)
 
 Let's group further by the make and year:
 
@@ -286,7 +286,7 @@ GROUP BY "vehicle_make", "vehicle_year"
 ORDER BY "vehicle_count" DESC
 ```
 
-![Vehicles By Make, Year](https://d1ydrm1s5noqxj.cloudfront.net/nyc_vehicles_by_make_year.png)
+![Vehicles By Make, Year](http://143.198.180.47:8084/public/question/31fca485-416f-4ec2-8484-ea3c715c6dab)
 
 [Link to live query](http://143.198.180.47:8084/public/question/2fbd4b02-1a58-4ebb-b02f-a764d2aa5dea)
 
@@ -304,7 +304,7 @@ ORDER BY "ticket_month" ASC
 
 ![Seasonality](https://d1ydrm1s5noqxj.cloudfront.net/nyc_when.png)
 
-[Link to live query](http://143.198.180.47:8084/public/question/35b5410a-9fbc-4cdc-8eac-ed2658371caf)
+[Link to live query](http://143.198.180.47:8084/public/question/cb456d23-e14b-419f-a660-417160dbc75a)
 
 **What time of the day are you most likely to get a ticket:**
 
@@ -317,7 +317,7 @@ ORDER BY "vehicle_count" DESC
 
 ![Violation Time](https://d1ydrm1s5noqxj.cloudfront.net/nyc_by_hour.png)
 
-[Link to live query](http://143.198.180.47:8084/public/question/225011ec-ce5e-486e-8ae4-9a582ebab4b9)
+[Link to live query](http://143.198.180.47:8084/public/question/83e782b6-20da-433d-b20c-400299c2ca72)
 
 **Distribution by month**
 
@@ -331,7 +331,7 @@ ORDER BY "ticket_month" DESC
 
 ![By Month](https://d1ydrm1s5noqxj.cloudfront.net/by_month.png)
 
-[Link to live query](http://143.198.180.47:8084/public/question/23526220-2075-4b0b-bd2f-3a8489457c2e)
+[Link to live query](http://143.198.180.47:8084/public/question/73ae5fe2-4b52-4958-b90d-298518c78ed6)
 
 July is the most quit months, while October, March and May are when more tickets are issued.
 
@@ -347,7 +347,7 @@ ORDER BY "vehicle_count" DESC
 
 ![By Precinct](https://d1ydrm1s5noqxj.cloudfront.net/nyc_by_precinct.png)
 
-[Link to live query](http://143.198.180.47:8084/public/question/05a28e7a-029c-4f8a-a2c5-d28b308f9cdd)
+[Link to live query](http://143.198.180.47:8084/public/question/2449e794-a194-43a9-9ba4-c5ed8c84e01d)
 
 Visualising geographical distribution is a bit hard because the initial dataset doesn’t have geodata in it. Enriching the data by geocoding the address would not be possible either, as geocoding of 42M rows will cost approximately ~$20,000.
 
@@ -355,6 +355,6 @@ Instead, we can use the police precinct id as the geolocation source and get the
 
 ## Source Code and Demo
 
-You can find the source code for this project in my [Github repository](https://github.com/lenalytics/nyc-tickets), and the live dashboard is hosted in DigitalOcean [here](http://143.198.180.47:8084/public/dashboard/a08b167b-bdfd-4c98-8df6-0f63a53c101a).
+You can find the source code for this project in my [Github repository](https://github.com/lenalytics/nyc-tickets), and the live dashboard is hosted in DigitalOcean [here](http://143.198.180.47:8084/public/dashboard/996d6276-59d9-4f66-b7b0-d1e60bced52b).
 
 Thank you!
